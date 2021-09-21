@@ -57,7 +57,7 @@ class Model : ObservableObject {
         content.subtitle = "Bro you just reached \(thresholds)% you told me to remind you about"
         content.sound = UNNotificationSound.default
         
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (120*60), repeats: false)
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (5), repeats: false)
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request)
     }
